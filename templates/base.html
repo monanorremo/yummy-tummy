@@ -20,12 +20,12 @@
     <title>Food Kids Love!</title>
 </head>
 
-<body>
+<body class="blue lighten-5">
 
 
     <header>
         <!-- top navbar -->
-        <nav class="nav-extended text-shadow light-blue darken-1">
+        <nav class="nav-extended text-shadow indigo darken-4">
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo">Yummy Tummy</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -35,7 +35,7 @@
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">New Recipe</a></li>
                     <li><a href="#">Log Out</a></li>
-                    <li><a href="#">Log In</a></li>
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
@@ -51,22 +51,22 @@
             <li><a href="#">Profile</a></li>
             <li><a href="#">New Recipe</a></li>
             <li><a href="#">Log Out</a></li>
-            <li><a href="#">Log In</a></li>
+            <li><a href="{{ url_for('login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
 
- 
+
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-blue lighten-3 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
 

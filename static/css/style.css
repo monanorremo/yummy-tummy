@@ -4,6 +4,8 @@
 
 .brand-logo {
     font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: large;
 }
 
 .banner {
@@ -15,4 +17,13 @@
     filter: opacity(60%);
     background-color: #cccccc;
     position: relative;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+#submit {
+    font-family: 'Open Sans', sans-serif;
 }
