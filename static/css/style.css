@@ -1,0 +1,18 @@
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.brand-logo {
+    font-family: 'Amatic SC', cursive;
+}
+
+.banner {
+    width: 100%;
+    height: 30vw;
+    background-image: url("/static/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: opacity(60%);
+    background-color: #cccccc;
+    position: relative;
+}

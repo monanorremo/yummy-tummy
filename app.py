@@ -21,6 +21,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def index():
+    recipes = list(
+        mongo.db.recipes.find({"created_by": "admin"}).limit(3))
+    return render_template("index.html", recipes=recipes)
+    
+
 @app.route("/get_tasks")
 def get_recipes():
     recipes = mongo.db.recipes.find()
