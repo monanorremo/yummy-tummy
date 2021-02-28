@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY")
+app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster.omsdy.mongodb.net/yummy_tummy?retryWrites=true'
+app.secret_key = 'ms3'
 
 
 mongo = PyMongo(app)
@@ -67,11 +67,11 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -83,8 +83,6 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
-
-
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
@@ -105,6 +103,7 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
