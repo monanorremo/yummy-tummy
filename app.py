@@ -107,7 +107,7 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
-        recipe = {
+        recipes = {
             "food_type": request.form.get("food_type"),
             "food_name": request.form.get("food_name"),
             "ingredients": request.form.get("ingredients"),
