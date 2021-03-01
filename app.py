@@ -25,12 +25,10 @@ def index():
     return render_template("index.html", recipes=recipes)
 
 
-
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -106,11 +104,25 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "food_type": request.form.get("food_type"),
+            "food_name": request.form.get("food_name"),
+            "ingredients": request.form.get("ingredients"),
+            "prep": request.form.get("prep"),
+            "food_img": request.form.get("food_img")
+            "created_by": session["user"]
+        }
+        mongo.db.recipe.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("get_recipes"))
+
     categories = mongo.db.categories.find().sort("food_type", 1)
     return render_template("add_recipe.html", categories=categories)
-    
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

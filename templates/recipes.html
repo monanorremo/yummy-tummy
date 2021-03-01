@@ -10,13 +10,14 @@
         <div class="card">
 
             <div class="card-image">
-                <img src="#">
-                <span class="card-title">Card Title</span>
+                <img src="{{ recipe.food_img }}">
+                
             </div>
 
             <div class="card-content">
-                <h5>{{ recipe.food_name }}</h5>
+                <strong>{{ recipe.food_name }}</strong>
                 <p>{{ recipe.food_type }}</p>
+                <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
 
             <div class="card-action">

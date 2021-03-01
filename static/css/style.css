@@ -31,3 +31,9 @@ h4 {
 #submit {
     font-family: 'Open Sans', sans-serif;
 }
+
+.card-image {
+    height: 30vh;
+    overflow: hidden;
+    
+}
