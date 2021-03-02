@@ -19,7 +19,7 @@
             <div class="card-action">
                 <a href="#">Try me!</a>
                 <a href="" class="btn-floating red"><i class="fas fa-trash"></i></a>
-                <a href="" class="btn-floating blue"><i class="fas fa-marker"></i></a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)  }}" class="btn-floating blue"><i class="fas fa-marker"></i></a>
 
             </div>
             

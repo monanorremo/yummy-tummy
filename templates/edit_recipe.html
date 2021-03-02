@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<h3 class="light-blue-text text-darken-4 center-align">Edit Recipe</h3>
+
+<div class="row card-panel grey lighten-5">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+        <!--Food group selection-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-cookie-bite prefix light-blue-text text-darken-4"></i>
+                <select id="food_type" name="food_type" class="validate" required>
+                    <option value="" disabled selected>Choose your recipe group</option>
+                    {% for category in categories %}
+                    <option value="{{ category.food_type }}">{{ category.food_type }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_name">Recipe group</label>
+            </div>
+        </div>
+        <!--Recipe Name-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-drumstick-bite prefix light-blue-text text-darken-4"></i>
+                <input id="food_name" name="food_name" minlength="3" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="food_name">Name of Dish</label>
+            </div>
+        </div>
+        <!--Ingredients-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-hotdog prefix light-blue-text text-darken-4"></i>
+                <textarea id="ingredients" name="ingredients" minlength="5" maxlength="200"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="ingredients">Ingredients</label>
+            </div>
+        </div>
+        <!--Prep-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-utensil-spoon prefix light-blue-text text-darken-4"></i>
+                <textarea id="prep" name="prep" minlength="5" maxlength="900" class="materialize-textarea validate"
+                    required></textarea>
+                <label for="prep">Food Prep</label>
+            </div>
+        </div>
+        <!--Dish Image-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-camera prefix light-blue-text text-darken-4"></i>
+                <input id="food_img" name="food_img" type="url" required class="materialize-textarea validate" required>
+                </input>
+                <label for="food_img">Add URL for your dish image or get URL from https://cloudinary.com/</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-small light-blue darken-1 text-shadow">
+                    Edit your Recipe! <i class="fas fa-lemon left"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
