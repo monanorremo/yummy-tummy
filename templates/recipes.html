@@ -1,28 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
 
 <div class="row">
     {% for recipe in recipes %}
 
     <div class="col m4">
-
         <div class="card">
-
             <div class="card-image">
                 <img src="{{ recipe.food_img }}">
-                
             </div>
-
             <div class="card-content">
                 <strong>{{ recipe.food_name }}</strong>
                 <p>{{ recipe.food_type }}</p>
                 <p><em>by: {{ recipe.created_by }}</em></p>
             </div>
-
             <div class="card-action">
                 <a href="#">Try me!</a>
+                <a href="" class="btn-floating red"><i class="fas fa-trash"></i></a>
+                <a href="" class="btn-floating blue"><i class="fas fa-marker"></i></a>
+
             </div>
+            
         </div>
     </div>
     {% endfor %}
@@ -30,3 +30,5 @@
 
 
 {% endblock %}
+
+

@@ -11,13 +11,13 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-cookie-bite prefix light-blue-text text-darken-4"></i>
-                <select multiple id="food_type" name="food_type" class="validate" required>
+                <select id="food_type" name="food_type" class="validate" required>
                     <option value="" disabled selected>Choose your recipe group</option>
                     {% for category in categories %}
                     <option value="{{ category.food_type }}">{{ category.food_type }}</option>
                     {% endfor %}
                 </select>
-                <label for="food_type">Recipe group</label>
+                <label for="category_name">Recipe group</label>
             </div>
         </div>
         <!--Recipe Name-->
