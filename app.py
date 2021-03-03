@@ -21,13 +21,13 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("food_name", 1))
     return render_template("index.html", recipes=recipes)
 
 
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort("food_name", 1))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -136,12 +136,10 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
-        
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("food_type", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
-
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -149,6 +147,12 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/manage_recipes")
+def manage_recipes():
+    recipes = list(mongo.db.recipes.find().sort("food_name", 1))
+    return render_template("manage_recipes.html", recipes=recipes)
 
 
 if __name__ == "__main__":
