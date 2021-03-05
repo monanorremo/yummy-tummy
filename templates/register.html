@@ -1,45 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h4 class="center-align">Register</h4>
+<h3 class="center-align" id="page_title">Register</h3>
 
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel">
-                <!-- username -->
-                <div class="row">
-					<div class="input-field col s12">
-						<i class="fas fa-user-astronaut prefix light-blue-text text-darken-4"></i>
-						<input id="username" name="username" type="text" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
-						<label for="username">Username</label>
-					</div>
-                </div>
-                <!-- password -->
-                <div class="row">
-                    <div class="input-field col s12">
-						<i class="fas fa-key prefix light-blue-text text-darken-4"></i>
-                        <input id="password" name="password" type="password" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- register -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large indigo darken-4 text-shadow" id="submit">
-                        Register <i class="fas fa-check"></i>
-                    </button>
+<div class="row flow-text">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-astronaut prefix light-blue-text text-darken-4"></i>
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
+                    <label for="username">Username</label>
                 </div>
             </div>
-        </form>
-    </div>
-    <div class="row">
-        <div class="col s12">
-            <p class="center-align">
-                Already Cooking?
-                <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In</a>
-            </p>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-key prefix light-blue-text text-darken-4"></i>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- register -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large indigo darken-4 text-shadow" id="submit">
+                    Register <i class="fas fa-check"></i>
+                </button>
+            </div>
         </div>
+    </form>
+</div>
+<div class="row flow-text">
+    <div class="col s12">
+        <p class="center-align">
+            Already Cooking?
+            <a href="{{ url_for('login') }}" class="light-blue-text text-darken-4">Log In</a>
+        </p>
     </div>
+</div>
 
 {% endblock %}

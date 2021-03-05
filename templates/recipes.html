@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
+<h3 class="light-blue-text text-darken-4 center-align" id="page_title">All Recipes</h3>
 
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -12,8 +12,9 @@
                 <label for="query">Search Recipes</label>
             </div>
             <div class="col s12 m4">
-                <a href="{{ url_for('get_recipes') }}" class="red btn-small text-shadow">Reset</a>
-                <button type="submit" class="light-blue darken-1 btn-small text-shadow">
+                <a href="{{ url_for('get_recipes') }}" class="btn-floating btn-medium waves-effect waves-light red"><i
+                        class="fas fa-undo-alt"></i></a>
+                <button type="submit" class="btn-floating btn-medium waves-effect waves-light blue">
                     <i class="fas fa-search left"></i> Search
                 </button>
             </div>
@@ -33,14 +34,14 @@
             <div class="card-content">
                 <strong>{{ recipe.food_name }}</strong>
                 <p>{{ recipe.food_type }}</p>
-                <p><em>by: {{ recipe.created_by }}</em></p>
+                <p><em>by: {{ recipe.created_by |title }}</em></p>
             </div>
             <div class="card-action">
                 <a href="#">Try me!</a>
                 {% if session.user|lower == recipe.created_by|lower %}
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)  }}" class="btn-floating red"><i
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)  }}" class="btn-floating btn-medium red"><i
                         class="fas fa-trash"></i></a>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)  }}" class="btn-floating blue"><i
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)  }}" class="btn-floating btn-medium blue"><i
                         class="fas fa-marker"></i></a>
                 {% endif %}
             </div>
@@ -50,7 +51,7 @@
     {% endfor %}
 </div>
 {% else %}
-<h3 class="red-text text-darken-4 center-align">No Results Found</h3>
+<h3 class="red-text flow-text text-darken-4 center-align" id="page_title">No Results Found</h3>
 
 {% endif %}
 
