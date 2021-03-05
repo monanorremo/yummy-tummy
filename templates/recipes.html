@@ -28,7 +28,7 @@
 
     <div class="col m4">
         <div class="card">
-            <div class="card-image">
+            <div class="card-image-thumbs">
                 <img src="{{ recipe.food_img }}">
             </div>
             <div class="card-content">
@@ -37,7 +37,7 @@
                 <p><em>by: {{ recipe.created_by |title }}</em></p>
             </div>
             <div class="card-action">
-                <a href="#">Try me!</a>
+                 <a href="{{ url_for('recipe_description', recipe_id=recipe._id)  }}">Try me!</a>
                 {% if session.user|lower == recipe.created_by|lower %}
                 <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)  }}" class="btn-floating btn-medium red"><i
                         class="fas fa-trash"></i></a>
