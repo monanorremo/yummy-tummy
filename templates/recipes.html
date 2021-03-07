@@ -22,13 +22,13 @@
     </form>
 </div>
 
-{% if recipes|length > 0 %}
+{% if recipes|length>0 %}
 <div class="row">
     {% for recipe in recipes %}
 
     <div class="col m4">
         <div class="card">
-            <div class="card-image-thumbs">
+            <div class="card-image" id="thumbs">
                 <img src="{{ recipe.food_img }}">
             </div>
             <div class="card-content">
@@ -51,7 +51,7 @@
     {% endfor %}
 </div>
 {% else %}
-<h3 class="red-text flow-text text-darken-4 center-align" id="page_title">No Results Found</h3>
+<h3 class="red-text flow-text text-darken-4 center-align">No Results Found</h3>
 
 {% endif %}
 

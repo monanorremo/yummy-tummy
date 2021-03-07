@@ -39,7 +39,7 @@ div {
     font-family: 'Open Sans', sans-serif;
 }*/
 
-.card-image-thumbs {
+#thumbs {
     height: 20vh;
     overflow: hidden;
     width: 100%;
