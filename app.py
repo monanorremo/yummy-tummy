@@ -103,8 +103,15 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+    # show users own recipes(code with some help from
+    # another CI student https://github.com/brimurphy/
+    # share-a-plate/blob/master/templates/my_recipes.html
+
+    recipes = list(mongo.db.recipes.find())
+
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username,
+                               recipes=recipes)
 
     return redirect(url_for("login"))
 
