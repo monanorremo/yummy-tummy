@@ -66,8 +66,15 @@
             <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
+
+
+
     </header>
 
+    <!-- Hero Image, got inspiration and guidance from this Youtube tutorial: https://www.youtube.com/watch?v=2XjTnfRsNGs&t=340s -->
+<section class="banner">
+     <img src="/static/banner.jpg" alt="banner" class="banner-img">
+</section>
 
     <section>
         <!-- flash messages -->
@@ -81,9 +88,9 @@
         {% endif %}
         {% endwith %}
     </section>
+<br><br><br><br><br><br><br><br>
 
-
-    <main class="container flow-text">
+    <main class="container">
 
         {% block content %}
         {% endblock %}
@@ -97,28 +104,29 @@
     {% endblock %}
 
     <footer class="page-footer text-shadow indigo darken-4">
-        <div class="container">
+        <br><br>
+        <div class="container center-align">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="white-text">You can use rows and columns here to organize your footer
-                        content.</p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                        <li><a class="light-blue-text text-darken-4" href="#!">Link 1</a></li>
-                        <li><a class="light-blue-text text-darken-4" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
+                     <a class="white-text icons" href="https://www.facebook.com/" target="_blank">
+                     <i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
+                     </a>
+
+                     <a class="white-text icons" href="https://www.twitter.com/" target="_blank">
+                     <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
+                     </a>
+                     
+                     <a class="white-text icons" href="https://www.instagram.com/" target="_blank">
+                     <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
+                     </a>
+
+                     <a class="white-text icons" href="https://www.pinterest.com/" target="_blank">
+                     <i class="fab fa-pinterest fa-lg fa-2x"></i>
+                     </a>                    
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright right-align">
             <div class="container">
-                © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                © 2021 mona norremo
             </div>
         </div>
     </footer>
@@ -126,3 +134,6 @@
 </body>
 
 </html>
+
+
+

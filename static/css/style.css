@@ -1,8 +1,7 @@
-div {
+html {
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
-}
-
+  }
 
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -16,17 +15,46 @@ div {
 }
 
 .banner {
-    background-image: url(/static/banner.jpg);
-    background-repeat: no-repeat;
-    filter: opacity(60%);
-    background-color: #cccccc;
+    height: 25vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: auto;
     overflow: hidden;
-    width: 100vw;
-    position: relative;
-    margin-left: -50vw;
-    height: 50vh;
-    left: 50%;
+    animation: slide 30s linear infinite;
+}
 
+@keyframes slide{
+    0%{
+        visibility: visible;
+    }
+     25%{
+        visibility: visible;
+    }
+    50%{
+        visibility: visible;
+    }
+    75%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+.banner-img {
+    width: 120%;
+    position: absolute;
+    filter: opacity(70%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoom-in 15s linear infinite;
+}
+ 
+@keyframes zoom-in{
+    100%{
+        width: 100%;
+    }
 }
 
 
@@ -48,4 +76,11 @@ div {
 
 .btn-small {
     border-radius: 24px;
+}
+
+.icons {
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
 }

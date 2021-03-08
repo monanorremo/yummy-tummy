@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    recipes = list(mongo.db.recipes.find().sort("food_name", 1))
+    recipes = list(mongo.db.recipes.find().limit(3))
     return render_template("index.html", recipes=recipes)
 
 
