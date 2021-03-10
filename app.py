@@ -130,8 +130,8 @@ def add_recipe():
         recipes = {
             "food_type": request.form.get("food_type"),
             "food_name": request.form.get("food_name"),
-            "ingredients": request.form.get("ingredients"),
-            "prep": request.form.get("prep"),
+            "ingredients": split_strip(request.form.get("ingredients")),
+            "prep": split_strip(request.form.get("prep")),
             "food_img": request.form.get("food_img"),
             "created_by": session["user"]
         }
@@ -149,8 +149,8 @@ def edit_recipe(recipe_id):
         submit = {
             "food_type": request.form.get("food_type"),
             "food_name": request.form.get("food_name"),
-            "ingredients": request.form.get("ingredients"),
-            "prep": request.form.get("prep"),
+            "ingredients": split_strip(request.form.get("ingredients")),
+            "prep": split_strip(request.form.get("prep")),
             "food_img": request.form.get("food_img"),
             "created_by": session["user"]
         }
@@ -158,9 +158,19 @@ def edit_recipe(recipe_id):
         flash("Recipe Successfully Updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    recipe["ingredients"] = format_array(recipe["ingredients"])
+    recipe["prep"] = format_array(recipe["prep"])
     categories = mongo.db.categories.find().sort("food_type", 1)
     return render_template("edit_recipe.html",
                            recipe=recipe, categories=categories)
+
+
+def split_strip(array_string):
+    return [x.strip() for x in array_string.split(',')]
+
+
+def format_array(arr):
+    return ",". join(arr)
 
 
 @app.route("/delete_recipe/<recipe_id>")

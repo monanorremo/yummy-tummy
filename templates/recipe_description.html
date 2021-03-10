@@ -19,10 +19,18 @@
            <p>by: {{ recipe.created_by |title }}</p>
            <br>
            <p>Ingredients:</p>
-           <p>{{ recipe.ingredients }}</p>
+           {% for ingredient in recipe.ingredients %}
+           <ul>
+           <li>{{ ingredient }}</li>
+            {% endfor %}
+           </ul>
            <br>
            <p>Prep:</p>
-           <p>{{ recipe.prep }}</p>
+           {% for steps in recipe.prep %}
+           <ul>
+           <li class="prep-steps">{{ steps }}</li>
+           {% endfor %}
+           </ul>
         </div>
       </div>
     </div>

@@ -84,3 +84,13 @@ html {
     padding-right: 20px;
     padding-top: 30px;
 }
+
+.prep-steps {
+    counter-reset: my-counter;
+}
+
+ 
+.prep-steps li::before {
+  counter-increment: my-counter;
+  content: "Step " counter(my-counter) ": ";
+}
