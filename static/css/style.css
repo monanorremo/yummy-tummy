@@ -3,7 +3,7 @@ html {
     font-size: medium;
   }
 
-.text-shadow {
+  .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -85,12 +85,16 @@ html {
     padding-top: 30px;
 }
 
-.prep-steps {
-    counter-reset: my-counter;
+/*Incrementing the steps numerically from W3schools: CSS counter-reset Property*/
+ol {
+    counter-reset: number;
+    list-style-type: none;
 }
 
- 
-.prep-steps li::before {
-  counter-increment: my-counter;
-  content: "Step " counter(my-counter) ": ";
+ol li::before {
+    content: "Step " counter(number) ": ";
+    counter-increment: number;
+    line-break: strict;
+    font-weight: bold;
 }
+

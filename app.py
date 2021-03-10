@@ -165,12 +165,16 @@ def edit_recipe(recipe_id):
                            recipe=recipe, categories=categories)
 
 
+# list comprehension to split array from input in StackOverflow:
+# https://stackoverflow.com/questions/4071396/split-by-comma-and-strip-whitespace-in-python
+
+
 def split_strip(array_string):
-    return [x.strip() for x in array_string.split(',')]
+    return [x.strip( ) for x in array_string.split(':')]
 
 
 def format_array(arr):
-    return ",". join(arr)
+    return ":".join(arr)
 
 
 @app.route("/delete_recipe/<recipe_id>")

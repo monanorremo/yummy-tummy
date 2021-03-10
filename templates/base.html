@@ -50,7 +50,7 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align light-blue-text text-darken 4">Yummy Tummy</h4>
+                <h4 class="center-align light-blue-text text-darken 4 brand-logo">Yummy Tummy</h4>
             </li>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             {% if session.user %}
@@ -72,24 +72,24 @@
     </header>
 
     <!-- Hero Image, got inspiration and guidance from this Youtube tutorial: https://www.youtube.com/watch?v=2XjTnfRsNGs&t=340s -->
-<section class="banner">
-     <img src="/static/banner.jpg" alt="banner" class="banner-img">
-</section>
-
+    <section class="banner">
+        <img src="/static/banner.jpg" alt="banner" class="banner-img">
+    </section>
+    <br><br><br><br><br><br><br>
     <section>
         <!-- flash messages -->
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
-        <div class="row flashes flow-text">
-            <h4 class="light-blue lighten-3 center-align">{{ message }}</h4>
+        <div class="row flashes">
+            <h4 class="light-blue-text.text-darken-4 center-align">{{ message }}</h4>
         </div>
         {% endfor %}
         {% endif %}
         {% endwith %}
     </section>
-<br><br><br><br><br><br><br><br>
 
+    <br><br>
     <main class="container">
 
         {% block content %}
@@ -107,21 +107,21 @@
         <br><br>
         <div class="container center-align">
             <div class="row">
-                     <a class="white-text icons" href="https://www.facebook.com/" target="_blank">
-                     <i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
-                     </a>
+                <a class="white-text icons" href="https://www.facebook.com/" target="_blank">
+                    <i class="fab fa-facebook fa-lg mr-md-5 mr-3 fa-2x"></i>
+                </a>
 
-                     <a class="white-text icons" href="https://www.twitter.com/" target="_blank">
-                     <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
-                     </a>
-                     
-                     <a class="white-text icons" href="https://www.instagram.com/" target="_blank">
-                     <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
-                     </a>
+                <a class="white-text icons" href="https://www.twitter.com/" target="_blank">
+                    <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x"></i>
+                </a>
 
-                     <a class="white-text icons" href="https://www.pinterest.com/" target="_blank">
-                     <i class="fab fa-pinterest fa-lg fa-2x"></i>
-                     </a>                    
+                <a class="white-text icons" href="https://www.instagram.com/" target="_blank">
+                    <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x"></i>
+                </a>
+
+                <a class="white-text icons" href="https://www.pinterest.com/" target="_blank">
+                    <i class="fab fa-pinterest fa-lg fa-2x"></i>
+                </a>
             </div>
         </div>
         <div class="footer-copyright right-align">
@@ -134,6 +134,3 @@
 </body>
 
 </html>
-
-
-
