@@ -3,7 +3,7 @@ html {
     font-size: medium;
   }
 
-  .text-shadow {
+.text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -74,17 +74,19 @@ html {
     position: relative;   
 }
 
-/*Ensure All recipes line upp in grid*/
+/*Ensure All recipes line upp in grid
 .image-wrapper {
-  display: grid;
-  padding-top: 90px;
+  /*display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 200px));
+  display: flex;
+  grid-template-rows: auto auto auto;
  
   
   border: 1px dashed red;
-}
+}*/
 
 
-.btn-small {
+.btn-large{
     border-radius: 24px;
 }
 

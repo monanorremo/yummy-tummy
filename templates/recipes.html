@@ -26,13 +26,13 @@
 <div class="row">
     {% for recipe in recipes %}
 
-    <div class="col m4 image-wrapper">
+    <div class="col m4">
         <div class="card">
             <div class="card-image" id="thumbs">
                 <img src="{{ recipe.food_img }}">
             </div>
             <div class="card-content">
-                <strong>{{ recipe.food_name }}</strong>
+                <p><strong>{{ recipe.food_name }}</strong></p>
                 <p>{{ recipe.food_type }}</p>
                 <p><em>by: {{ recipe.created_by |title }}</em></p>
             </div>
