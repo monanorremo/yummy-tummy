@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster.omsdy.mongodb.net/yummy_tummy?retryWrites=true'
-app.secret_key = 'ms3'
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.secret_key = os.environ.get("SECRET_KEY")
 
 
 mongo = PyMongo(app)
