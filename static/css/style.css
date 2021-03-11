@@ -74,10 +74,21 @@ html {
     position: relative;   
 }
 
+/*Ensure All recipes line upp in grid*/
+.image-wrapper {
+  display: grid;
+  padding-top: 90px;
+ 
+  
+  border: 1px dashed red;
+}
+
+
 .btn-small {
     border-radius: 24px;
 }
 
+/* Footer icons*/
 .icons {
     
     padding-left: 20px;

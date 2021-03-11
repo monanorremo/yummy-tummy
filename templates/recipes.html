@@ -26,7 +26,7 @@
 <div class="row">
     {% for recipe in recipes %}
 
-    <div class="col m4">
+    <div class="col m4 image-wrapper">
         <div class="card">
             <div class="card-image" id="thumbs">
                 <img src="{{ recipe.food_img }}">
@@ -47,9 +47,11 @@
             </div>
 
         </div>
+        
     </div>
     {% endfor %}
 </div>
+
 {% else %}
 <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
 
