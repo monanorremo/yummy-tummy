@@ -5,10 +5,15 @@ This project/repositary contains the code for a platform/application to store an
 
 This app has been built with materialize css to be fully responsive on all devices and screen sizes. 
 Here are some Wireframes that I worked on initially when I started the project:
-![Desktop:Laptop All recipes.png](static/wireframes/Desktop:Laptop%20All%20recipes.png)
+![Desktop:Laptop Home page recipes.png](/static/wireframes/Desktop%3ALaptop%20Home%20page.png)
+![Desktop:Laptop All recipes.png](/static/wireframes/Desktop:Laptop%20All%20recipes.png)
+![Phone Home page.png](/static/wireframes/Phone%20Home%20page.png)
+![Phone All recipes.png](/static/wireframes/wireframes/Phone%20All%20recipes.png)
+
+#UX
 
 
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNTEzNDgwNl19
+
+
 -->
