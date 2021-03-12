@@ -8,6 +8,7 @@ Here are some Wireframes that I worked on initially when I started the project:
 ![Desktop:Laptop All recipes.png](static/wireframes/Desktop:Laptop%20All%20recipes.png)
 
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNTMwMDAwOF19
+eyJoaXN0b3J5IjpbMTExNTEzNDgwNl19
 -->
