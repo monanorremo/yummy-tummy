@@ -106,14 +106,14 @@ Frameworks and Programs
 * [Gitpod](https://gitpod.io/workspaces/)
     * Used to write out the JQuery, HTML and CSS code in its editor, as well as the README file. It also stored the images for site as well as wireframes. Also used Gitpod for Git add, status, commit and push the code to Github.  
 * [Materialize CSS](https://materializecss.com/)
-	*Used Materialize all through the project. This UI is easy to navigate and is also the same style as Google uses. 
+	* Used Materialize all through the project. This UI is easy to navigate and is also the same style as Google uses. 
 * [Flask](https://palletsprojects.com/p/flask/) 
 	* Used Flask 1.1.2 for developing this project
 * [Flask-Pymongo](https://flask-pymongo.readthedocs.io/en/latest/)
     * Used Used Flask_Pymongo 2.3.0 for developing this project
 * [Pymongo](https://pypi.org/project/pymongo/)
     * Used Used Pymongo 3.11.3 for developing this project 
-*[Jinja](https://palletsprojects.com/p/jinja/)
+* [Jinja](https://palletsprojects.com/p/jinja/)
     * Used Jinja for developing this project 
 * [Werkzeug](https://palletsprojects.com/p/werkzeug/)
     * Used Werkzeug 1.0.1 for developing this project
@@ -122,7 +122,7 @@ Frameworks and Programs
 * [Google Fonts](https://fonts.google.com/)
     * Used two complementary fonts for this game. 
 * [Font Awesome](https://fontawesome.com/)
-	*Used various playful icons for forms and buttons. 
+	* Used various playful icons for forms and buttons. 
 * [Stack Overflow](https://stackoverflow.com/)
     * Used Stack Overflow to provide information on various steps of the build as well as trouble-shooting. 
 * [W3 Schools](https://www.w3schools.com/)
@@ -228,9 +228,9 @@ os.environ.setdefault("MONGO_DBNAME", "YOUR_MONGO_DBNAME")```
 ### Content
 The content contained in the project is mainly my own and anywhere I've used any outside references, I've made reference to them (as in this README document). I've carefully referenced all sources of code and websites referred to, as well as my own research.
 Recipes for database:
-https://www.kidspot.com.au/kitchen/
+* [Kidspot](https://www.kidspot.com.au/kitchen/)
 
-https://www.yummytoddlerfood.com/recipe-index/
+* [Yummy Toddler Food](https://www.yummytoddlerfood.com/recipe-index/)
 
 
 ### Media
@@ -240,4 +240,7 @@ The index image with the muffin-pan filled with veggies etc I found at [https://
 ### Code
 *   I based the project on code I learned throughout the course from the tutorials of Code Institute Mini-project and by referring to the lessons in the module. I also referred to W3Schools and also on occasion I referred to Stack Overflow.
 
+
+## Acknowledgements
+I would like to thank my patient children for letting me work on my milestone project. Also the Slack community for CI, the terrific tutors at CI tutor support. And last but definately not least, Youtube and StackOverflow.
 
