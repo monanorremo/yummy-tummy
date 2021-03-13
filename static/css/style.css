@@ -14,6 +14,7 @@ html {
     margin-left: 5vw;
 }
 
+/* Animation of the banner*/
 .banner {
     height: 25vh;
     width: 100%;
@@ -63,9 +64,6 @@ html {
     font-weight: 700;
 }
 
-/*#submit {
-    font-family: 'Open Sans', sans-serif;
-}*/
 
 .thumbs {
     height: 20vh;
@@ -73,17 +71,6 @@ html {
     width: 100%;
     position: relative;   
 }
-
-/*Ensure All recipes line upp in grid
-.image-wrapper {
-  /*display: grid;
-  grid-template-columns: repeat(3, minmax(min-content, 200px));
-  display: flex;
-  grid-template-rows: auto auto auto;
- 
-  
-  border: 1px dashed red;
-}*/
 
 
 .btn-large{
