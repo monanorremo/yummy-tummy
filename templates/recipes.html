@@ -21,11 +21,10 @@
         </div>
     </form>
 </div>
-
+<!--Library of all recipes ordered alphabetically-->
 {% if recipes|length>0 %}
 <div class="row">
     {% for recipe in recipes %}
-    <div class="row">
         <div class="col m4">
             <div class="card">
                 <div class="card-image thumbs">
@@ -45,10 +44,9 @@
                         class="btn-floating btn-medium blue"><i class="fas fa-marker"></i></a>
                     {% endif %}
                 </div>
-
             </div>
         </div>
-    </div>
+    
     {% endfor %}
 </div>
 
