@@ -92,7 +92,7 @@ The recipes collection will contain all information needed for one recipe includ
 ### Technologies Used
 Languages
 * 68.3% [HTML5](https://en.wikipedia.org/wiki/HTML5)
-* 18.2% [Python](https://en.wikipedia.org/wiki/Python_(programming_language)
+* 18.2% [Python](https://www.python.org/)
 * 5.0% [CSS3](https://en.wikipedia.org/wiki/CSS)
 
 
@@ -177,49 +177,34 @@ I used version control (GitHub) on an ongoing basis to back-up my code to a remo
 * [Heroku](https://devcenter.heroku.com/)
 
 ## Steps for Cloning Locally
-1. Go to the project repository [Yummy Tummy](https://github.com/monanorremo/yummy-tummy) 
+1. Go to the project repository [Yummy Tummy](https://github.com/monanorremo/yummy-tummy).
 1. Open Git and select clone from the repository tab. Enter source location [Yummy Tummy](https://github.com/monanorremo/yummy-tummy) and the location you wish to store the files and press the clone button 
-1. Open your IDE and navigate to the directory where you stored the cloned files 
+1. Open your IDE and navigate to the directory where you stored the cloned files.
 1. Install requirements from requirements.txt file by entering pip3 install -r requirements.txt in the terminal 
-1. Activate your virtual environment by py -m venv virtual into the terminal 
-1. Create an environment file env.py to store environment variables. Add environment variables as shown: 
-os.environ.setdefault("IP", "0.0.0.0")
-os.environ.setdefault("PORT", "5000")
-os.environ.setdefault("SECRET_KEY", "ADD_YOUR_SECRET_KEY")
-os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
-os.environ.setdefault("MONGO_DBNAME", "YOUR_MONGO_DBNAME")```
+1. Activate your virtual environment by py -m venv virtual into the terminal.
+1. Create an environment file env.py to store environment variables. Add environment variables as shown:
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "ADD_YOUR_SECRET_KEY")
+    os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
+    os.environ.setdefault("MONGO_DBNAME", "YOUR_MONGO_DBNAME")```
 
-* Remember to update your **Secret Key**, **Database Name** and **Database URI**
+    Remember to update your **Secret Key**, **Database Name** and **Database URI**
 
 1. Add `env.py` to a `.gitignore` file so sensitive data will not be pushed to GIT
-
 1.  You should now be able to run the program by entering `python3 app.py` into the terminal
 
 ### Deploying to Heroku
 1. Login to [Heroku](https://dashboard.heroku.com/)
-
 1.  Go to `Create new App` from `New` tab
-
 1.  Go to settings
-
 1.  Click on `Reveal Config Vars` to add environment variables to match env.py file
-
 1.  Click on `Deploy` tab and set to automatically deploy from GitHub by entering the repository name [Yummy Tummy](https://github.com/monanorremo/yummy-tummy) 
-
 1.  Click on connect
-
-1.  In your IDE create the requirements.txt file to contain all dependencies
-
-` pip3 freeze --local > requirements.txt`
-
-1.  Create the Procfile
-
-`echo web: python app.py > Procfile`
-
+1.  In your IDE create the requirements.txt file to contain all dependencies ` pip3 freeze --local > requirements.txt`
+1.  Create the Procfile `echo web: python app.py > Procfile`
 1.  Make sure all files have been pushed to GitHub repository 
-
 1.  In Heroku in the `Deploy` tab scroll down to `Manual deploy` and click `Deploy Branch`
-
 1.  When Heroku is finished building the app you can press the `View` button to view your deployed app
 
 
